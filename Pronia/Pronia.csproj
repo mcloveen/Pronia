@@ -10,15 +10,29 @@
     <None Remove="Models\" />
     <None Remove="Views\Home\" />
     <None Remove="DataAccess\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Manage\" />
+    <None Remove="Areas\Manage\Controllers\" />
+    <None Remove="Areas\Manage\Data\" />
+    <None Remove="Areas\Manage\Models\" />
+    <None Remove="Areas\Manage\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="wwwroot\" />
     <Folder Include="Views\Home\" />
     <Folder Include="DataAccess\" />
+    <Folder Include="Areas\" />
+    <Folder Include="wwwroot\admin\" />
+    <Folder Include="Areas\Manage\" />
+    <Folder Include="Areas\Manage\Controllers\" />
+    <Folder Include="Areas\Manage\Data\" />
+    <Folder Include="Areas\Manage\Models\" />
+    <Folder Include="Areas\Manage\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\admin\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />
@@ -27,6 +41,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="PesterForPackageManagerConsole" Version="1.0.0" />
   </ItemGroup>
 </Project>

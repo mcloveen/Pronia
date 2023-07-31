@@ -53,10 +53,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.20, )"
-            },
-            "PesterForPackageManagerConsole": {
-              "target": "Package",
-              "version": "[1.0.0, )"
             }
           },
           "imports": [

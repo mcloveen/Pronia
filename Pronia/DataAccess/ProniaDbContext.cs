@@ -11,6 +11,7 @@ namespace Pronia.DataAccess
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer("Server=MacDesktop;Database=Pronia;Username=sa;Password=said1234@");
+
         }
     }
 }

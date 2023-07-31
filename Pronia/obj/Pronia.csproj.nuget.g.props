@@ -17,8 +17,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design/6.0.20/build/net6.0/Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design/6.0.20/build/net6.0/Microsoft.EntityFrameworkCore.Design.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgPester Condition=" '$(PkgPester)' == '' ">/Users/mcloveen/.nuget/packages/pester/3.4.6</PkgPester>
-    <PkgPesterForPackageManagerConsole Condition=" '$(PkgPesterForPackageManagerConsole)' == '' ">/Users/mcloveen/.nuget/packages/pesterforpackagemanagerconsole/1.0.0</PkgPesterForPackageManagerConsole>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/Users/mcloveen/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.20</PkgMicrosoft_EntityFrameworkCore_Tools>
   </PropertyGroup>
 </Project>

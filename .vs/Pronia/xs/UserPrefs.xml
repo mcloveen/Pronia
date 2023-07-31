@@ -1,33 +1,56 @@
 ﻿<Properties StartupConfiguration="{AB28A160-8D63-4A60-905C-DE05A5A02963}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pronia/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pronia/Areas/Manage/Controllers/SliderController.cs">
     <Files>
-      <File FileName="Pronia/Controllers/HomeController.cs" Line="7" Column="26" />
-      <File FileName="Pronia/Views/_ViewImports.cshtml" Line="4" Column="1" />
-      <File FileName="Pronia/Views/Shared/_Layout.cshtml" Line="440" Column="39" />
+      <File FileName="Pronia/Controllers/HomeController.cs" />
+      <File FileName="Pronia/Views/_ViewImports.cshtml" />
+      <File FileName="Pronia/Views/Shared/_Layout.cshtml" />
+      <File FileName="Pronia/Views/Home/Index.cshtml" />
+      <File FileName="Pronia/Program.cs" />
+      <File FileName="Pronia/DataAccess/ProniaDbContext.cs" />
+      <File FileName="Pronia/Models/Slider.cs" />
+      <File FileName="Pronia/Migrations/20230730215121_CreatedSlidersTable.cs" />
+      <File FileName="Pronia/appsettings.json" />
+      <File FileName="Pronia/Views/_ViewStart.cshtml" />
+      <File FileName="Pronia/Migrations/ProniaDbContextModelSnapshot.cs" />
+      <File FileName="Pronia/Areas/Manage/Controllers/SliderController.cs" Line="19" Column="1" />
+      <File FileName="Pronia/Areas/Manage/Views/Shared/admin_Layout.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Pronia" expanded="True">
-            <Node name="Pronia">
+            <Node name="Pronia" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Manage" expanded="True">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="SliderController.cs" selected="True" />
+                  </Node>
+                  <Node name="Data" expanded="True" />
+                  <Node name="Models" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="Shared" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="DataAccess" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" selected="True" />
+                <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="assets" expanded="True" />
-              </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
