@@ -11,11 +11,6 @@
     <None Remove="Views\Home\" />
     <None Remove="DataAccess\" />
     <None Remove="Areas\" />
-    <None Remove="Areas\Manage\" />
-    <None Remove="Areas\Manage\Controllers\" />
-    <None Remove="Areas\Manage\Data\" />
-    <None Remove="Areas\Manage\Models\" />
-    <None Remove="Areas\Manage\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -24,11 +19,6 @@
     <Folder Include="DataAccess\" />
     <Folder Include="Areas\" />
     <Folder Include="wwwroot\admin\" />
-    <Folder Include="Areas\Manage\" />
-    <Folder Include="Areas\Manage\Controllers\" />
-    <Folder Include="Areas\Manage\Data\" />
-    <Folder Include="Areas\Manage\Models\" />
-    <Folder Include="Areas\Manage\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

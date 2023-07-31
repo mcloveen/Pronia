@@ -1,18 +1,95 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Pronia.DataAccess;
+using Pronia.Extensions;
+using Pronia.Services.Interfaces;
+using Pronia.ViewModels.SliderVMs;
 
-namespace Pronia.Areas.Manage.Controllers
+namespace Pronia.Areas.Manage.Controllers;
+
+
+public class SliderController : Controller
 {
-    [Area("Manage")]
-    public class SliderController : Controller
+    private readonly ISliderService _sliderService;
+
+    public SliderController(ISliderService sliderService)
     {
-       
-        public async Task<IActionResult> Index()
+        _sliderService = sliderService;
+    }
+    public async Task<IActionResult> Index()
+    {
+        try
         {
-            using ProniaDbContext context = new ProniaDbContext();
-            return View(await context.Sliders.ToListAsync());
+            return View(await _sliderService.GetAll());
+        }
+        catch (Exception)
+        {
+
+            return NotFound();
+        }
+    }
+    public IActionResult Create()
+    {
+        return View();
+    }
+    [HttpPost]
+    public async Task<IActionResult> Create(CreateSliderVM sliderVM)
+    {
+        try
+        {
+            if (sliderVM.ImageFile != null)
+            {
+                if (!sliderVM.ImageFile.IsTypeValid("image")) ;
+                ModelState.AddModelError("ImageFile", "Wrong file type");
+                if (sliderVM.ImageFile.IsSizeValid(2)) ;
+                ModelState.AddModelError("ImageFile", "File maximum size is 2mb");
+            }
+            if (!ModelState.IsValid) return View();
+            await _sliderService.Create(sliderVM);
+            return RedirectToAction(nameof(Index));
+        }
+        catch (Exception)
+        {
+
+            return NotFound();
+        }
+    }
+    public async Task<IActionResult> Delete(int? id)
+    {
+        try
+        {
+            await _sliderService.Delete(id);
+            TempData["IsDeleted"] = true;
+            return RedirectToAction(nameof(Index));
+        }
+        catch (Exception)
+        {
+
+            return NotFound();
+        }
+    }
+
+    public async Task<IActionResult> Update(int? id)
+    {
+        try
+        {
+            return View(await _sliderService.GetById(id));
+        }
+        catch (Exception)
+        {
+
+            return NotFound();
+        }
+    }
+    [HttpPost]
+    public async Task<IActionResult> Update(int? id, UpdateSliderVM sliderVM)
+    {
+        try
+        {
+            await _sliderService.Update(sliderVM);
+            return RedirectToAction(nameof(Index));
+        }
+        catch (Exception)
+        {
+            return NotFound();
         }
     }
 }
-

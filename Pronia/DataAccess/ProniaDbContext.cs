@@ -1,17 +1,27 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pronia.Models;
 
+
 namespace Pronia.DataAccess
 {
-	public class ProniaDbContext:DbContext
-	{
-        public DbSet<Slider> Sliders { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    namespace Pronia.DataAccess
+    {
+
+
+        public class ProniaDbContext : DbContext
         {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=MacDesktop;Database=Pronia;Username=sa;Password=said1234@");
 
+
+            public ProniaDbContext(DbContextOptions options) : base(options)
+            {
+
+            }
+
+
+            public DbSet<Slider> Sliders { get; set; }
+            public DbSet<Product> Products { get; set; }
+            public DbSet<ProductImage> ProductImages { get; set; }
         }
     }
 }
