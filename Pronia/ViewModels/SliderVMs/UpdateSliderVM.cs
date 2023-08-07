@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Pronia.ViewModels.SliderVMs;
 
@@ -8,7 +9,7 @@ public record UpdateSliderVM
     [Required, MaxLength(50)]
     public string Title { get; set; }
     [Required, MaxLength(200)]
-    public string Description { get; set; }
+    public string Desc { get; set; }
     [MaxLength(50)]
     public string? Offer { get; set; }
     [Required, MaxLength(50)]

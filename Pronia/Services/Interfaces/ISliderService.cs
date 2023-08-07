@@ -1,8 +1,9 @@
-﻿using Pronia.Models;
+﻿using System;
+using P137Pronia.Models;
+using P137Pronia.ViewModels.SliderVMs;
 using Pronia.ViewModels.SliderVMs;
 
-namespace Pronia.Services.Interfaces;
-
+namespace P137Pronia.Services.Interfaces;
 
 public interface ISliderService
 {
@@ -11,5 +12,6 @@ public interface ISliderService
     Task Delete(int? id);
     Task<ICollection<Slider>> GetAll();
     Task<Slider> GetById(int? id);
+    Task Update(UpdateSliderVM sliderVM);
 }
 

@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Pronia.ViewModels.ProductVMs
 {
-    public record CreateProductVM
-    {
+	public record CreateProductVM
+	{
         [Required, MaxLength(64)]
         public string Name { get; set; }
         [Required]
@@ -15,11 +16,13 @@ namespace Pronia.ViewModels.ProductVMs
         [Required, Range(0, Int32.MaxValue)]
         public int StockCount { get; set; }
         [Required, Range(0, 5)]
-        public byte Rating { get; set; }
+        public byte Raiting { get; set; }
         [Required]
         public IFormFile MainImageFile { get; set; }
         public IFormFile? HoverImageFile { get; set; }
         public List<IFormFile>? ImageFiles { get; set; }
+        public List<int> CategoryIds { get; set; }
     }
 }
+
 

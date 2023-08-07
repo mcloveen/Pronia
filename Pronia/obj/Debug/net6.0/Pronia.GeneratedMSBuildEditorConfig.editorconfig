@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/mcloveen/Projects/Pronia/Pronia
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/mcloveen/Projects/Pronia/Pronia/Areas/Manage/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL0NhdGVnb3J5L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mcloveen/Projects/Pronia/Pronia/Areas/Manage/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL0NhdGVnb3J5L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/mcloveen/Projects/Pronia/Pronia/Areas/Manage/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL1Byb2R1Y3QvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,8 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL1Byb2R1Y3QvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/mcloveen/Projects/Pronia/Pronia/Areas/Manage/Views/Product/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL1Byb2R1Y3QvVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/mcloveen/Projects/Pronia/Pronia/Areas/Manage/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL1NoYXJlZC9fQWRtaW5MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mcloveen/Projects/Pronia/Pronia/Areas/Manage/Views/Shared/_ValidationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL1NoYXJlZC9fVmFsaWRhdGlvblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/mcloveen/Projects/Pronia/Pronia/Areas/Manage/Views/Slider/Create.cshtml]
@@ -48,12 +64,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvTWFuYWdlL1ZpZXdzL19WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/mcloveen/Projects/Pronia/Pronia/Views/Flower/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmxvd2VyL0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mcloveen/Projects/Pronia/Pronia/Views/Flower/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmxvd2VyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/mcloveen/Projects/Pronia/Pronia/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/mcloveen/Projects/Pronia/Pronia/Views/Shared/Components/Footer/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvRm9vdGVyL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mcloveen/Projects/Pronia/Pronia/Views/Shared/Components/Header/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvSGVhZGVyL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/mcloveen/Projects/Pronia/Pronia/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mcloveen/Projects/Pronia/Pronia/Views/Shared/_BasketPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19CYXNrZXRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mcloveen/Projects/Pronia/Pronia/Views/Shared/_ProductFilterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Qcm9kdWN0RmlsdGVyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mcloveen/Projects/Pronia/Pronia/Views/Shared/_ProductPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Qcm9kdWN0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/mcloveen/Projects/Pronia/Pronia/Views/_ViewImports.cshtml]

@@ -1,14 +1,17 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model HomeVM
+
+@section styles{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 }
-@model HomeVm
+
 <!-- Begin Slider Area -->
+<input type="hidden" value="@ViewBag.ProductCount" id="prodCount" />
 <div class="slider-area">
 
     <!-- Main Slider -->
     <div class="swiper-container main-slider swiper-arrow with-bg_white">
         <div class="swiper-wrapper">
-            @foreach (var item in Model.Sliders)
+            @foreach (Slider item in Model.Sliders)
             {
                 <div class="swiper-slide animation-style-01">
                     <div class="slide-inner style-1 bg-height" data-bg-image="~/assets/images/slider/bg/1-1.jpg">
@@ -18,7 +21,7 @@
                                     <div class="slide-content text-black">
                                         <span class="offer">@item.Offer</span>
                                         <h2 class="title">@item.Title</h2>
-                                        <p class="short-desc">@item.Description</p>
+                                        <p class="short-desc">@item.Desc</p>
                                         <div class="btn-wrap">
                                             <a class="btn btn-custom-size xl-size btn-pronia-primary" href="shop.html">@item.ButtonText</a>
                                         </div>
@@ -30,9 +33,12 @@
                                             <div class="expand-width" data-depth="0.2">
                                                 @if (item.ImageUrl.StartsWith("http"))
                                                 {
-                                                    <img src=@item.ImageUrl alt="Inner Image">
+                                                    <img src="@item.ImageUrl" alt="Inner Image">
                                                 }
-                                         
+                                                else
+                                                {
+                                                    <img src="~/assets/imgs/@item.ImageUrl" alt="Inner Image">
+                                                }
                                             </div>
                                         </div>
                                     </div>
@@ -41,7 +47,9 @@
                         </div>
                     </div>
                 </div>
+
             }
+
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination d-md-none"></div>
@@ -123,58 +131,8 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="featured-tab">
-                        <div class="product-item-wrap row">
-                            @foreach (var item in Model.Products)
-                            {
-                                <div class="col-xl-3 col-md-4 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="product-img">
-                                            <a href="shop.html">
-                                                <img class="primary-img" src="~/assets/imgs/products/@item.MainImage" alt="Product Images">
-                                                @if (item.HoverImage != null)
-                                                {
-                                                    <img class="secondary-img"
-                                                         src="~/assets/imgs/product/@item.HoverImage"
-                                                         alt="Product Images">
-                                                }
-                                            </a>
-                                            <div class="product-add-action">
-                                                <ul>
-                                                    <li>
-                                                        <a href="wishlist.html" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
-                                                            <i class="pe-7s-like"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li class="quuickview-btn" data-bs-toggle="modal" data-bs-target="#quickModal">
-                                                        <a href="#" data-tippy="Quickview" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
-                                                            <i class="pe-7s-look"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="cart.html" data-tippy="Add to cart" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
-                                                            <i class="pe-7s-cart"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <a class="product-name" href="shop.html">@item.Name</a>
-                                            <div class="price-box pb-1">
-                                                <span class="new-price">$@item.Price</span>
-                                            </div>
-                                            <div class="rating-box">
-                                                <ul>
-                                                    @for (int i = 0; i < item.Rating; i++)
-                                                    {
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    }
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
+                        <div class="product-item-wrap row featured--div">
+                            <partial name="_ProductPartial" model="Model.Products"></partial>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="bestseller" role="tabpanel" aria-labelledby="bestseller-tab">
@@ -890,6 +848,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-3">
+                    <a asp-action="LoadMore" class="btn btn-primary load-more">Load More</a>
+                </div>
             </div>
         </div>
     </div>
@@ -1395,3 +1356,103 @@
     </div>
 </div>
 <!-- Blog Area End Here -->
+
+@section scripts{
+    <script>let take = 4;
+        let skip = 4;
+        $(".load-more").click(e => {
+            e.preventDefault();
+            if ($('#prodCount').val() == $('.feat-prod').length) {
+                e.target.remove();
+            }
+            else {
+                fetch(`${e.target.href}?take=${take}&skip=${skip}`)
+                    .then(data => data.text())
+                    .then(res => {
+                        $(".featured--div").append(res)
+                        skip += 4;
+                        if ($('#prodCount').val() == $('.feat-prod').length) {
+                            e.target.remove();
+                        }
+                    })
+                    .catch(e => console.log(e))
+            }
+        })</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>let prods = document.querySelectorAll(".feat-prod .pe-7s-cart");
+        prods.forEach(prod => {
+            prod.addEventListener("click", e => { 
+                e.preventDefault();
+                fetch(e.target.parentElement.href)
+                    .then(res => {
+                        if (res.ok) {
+                            let count = document.getElementById("basket-count").innerText;
+                            document.getElementById("basket-count").innerText = Number(count) + 1
+                            document.querySelector(".asd").innerText=Number(count)+1
+                            Command: toastr["success"]("Sebete elave olundu")
+
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": false,
+                                "positionClass": "toast-top-right",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                        }
+                        else {
+                            Command: toastr["error"]("Bir xeta bas verdi - else")
+
+                                toastr.options = {
+                                    "closeButton": false,
+                                    "debug": false,
+                                    "newestOnTop": false,
+                                    "progressBar": false,
+                                    "positionClass": "toast-top-right",
+                                    "preventDuplicates": false,
+                                    "onclick": null,
+                                    "showDuration": "300",
+                                    "hideDuration": "1000",
+                                    "timeOut": "5000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                }
+                        }
+                    })
+                    .catch(() => {
+                        Command: toastr["error"]("Bir xeta bas verdi - catch")
+
+                        toastr.options = {
+                            "closeButton": false,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": false,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                    })
+            })
+        })</script>
+}

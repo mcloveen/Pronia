@@ -1,59 +1,105 @@
-﻿<Properties StartupConfiguration="{AB28A160-8D63-4A60-905C-DE05A5A02963}|Default">
+﻿<Properties StartupConfiguration="{610FF8B3-FAF0-4773-95C2-DEFA0BB2CF30}|Default">
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pronia/DataAccess/ProniaDbContext.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pronia/Program.cs">
     <Files>
-      <File FileName="Pronia/Controllers/HomeController.cs" />
-      <File FileName="Pronia/Views/_ViewImports.cshtml" />
-      <File FileName="Pronia/Views/Shared/_Layout.cshtml" />
-      <File FileName="Pronia/Views/Home/Index.cshtml" />
-      <File FileName="Pronia/Program.cs" />
-      <File FileName="Pronia/DataAccess/ProniaDbContext.cs" Line="22" Column="1" />
-      <File FileName="Pronia/Models/Slider.cs" />
-      <File FileName="Pronia/Migrations/20230730215121_CreatedSlidersTable.cs" />
-      <File FileName="Pronia/appsettings.json" />
-      <File FileName="Pronia/Views/_ViewStart.cshtml" />
-      <File FileName="Pronia/Migrations/ProniaDbContextModelSnapshot.cs" />
-      <File FileName="Pronia/Areas/Manage/Controllers/SliderController.cs" />
       <File FileName="Pronia/Areas/Manage/Controllers/ProductController.cs" />
+      <File FileName="Pronia/Areas/Manage/Controllers/SliderController.cs" />
+      <File FileName="Pronia/Areas/Manage/Views/Product/Create.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Product/Index.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Shared/_AdminLayout.cshtml" />
       <File FileName="Pronia/Areas/Manage/Views/_ViewImports.cshtml" />
       <File FileName="Pronia/Areas/Manage/Views/_ViewStart.cshtml" />
+      <File FileName="Pronia/Controllers/HomeController.cs" />
+      <File FileName="Pronia/DataAccess/ProniaDBContext.cs" />
+      <File FileName="Pronia/Extensions/FileExtension.cs" />
+      <File FileName="Pronia/ExtensionServices/Implements/FileService.cs" />
+      <File FileName="Pronia/ExtensionServices/Interfaces/IFileService.cs" />
+      <File FileName="Pronia/Migrations/ProniaDBContextModelSnapshot.cs" />
       <File FileName="Pronia/Models/BaseEntity.cs" />
       <File FileName="Pronia/Models/Product.cs" />
       <File FileName="Pronia/Models/ProductImage.cs" />
+      <File FileName="Pronia/Models/Slider.cs" />
+      <File FileName="Pronia/Properties/launchSettings.json" />
       <File FileName="Pronia/Services/Implements/ProductService.cs" />
-      <File FileName="Pronia/Services/Implements/IFileService.cs" />
       <File FileName="Pronia/Services/Implements/SliderService.cs" />
-      <File FileName="Pronia/ViewModels/IndexVMs/HomeVM.cs" />
       <File FileName="Pronia/ViewModels/ProductVMs/CreateProductVM.cs" />
       <File FileName="Pronia/ViewModels/SliderVMs/CreateSliderVM.cs" />
       <File FileName="Pronia/ViewModels/SliderVMs/UpdateSliderVM.cs" />
-      <File FileName="Pronia/Properties/launchSettings.json" />
-      <File FileName="Pronia/Areas/Manage/Views/Product/Create.cshtml" />
-      <File FileName="Pronia/Areas/Manage/Views/Product/Index.cshtml" />
+      <File FileName="Pronia/Views/Home/Index.cshtml" />
+      <File FileName="Pronia/Views/Shared/_Layout.cshtml" />
+      <File FileName="Pronia/Views/Shared/Error.cshtml" />
+      <File FileName="Pronia/Views/_ViewImports.cshtml" />
+      <File FileName="Pronia/Views/_ViewStart.cshtml" />
+      <File FileName="Pronia/Program.cs" Line="12" Column="31" />
+      <File FileName="Pronia/Services/Interfaces/IProductService.cs" />
+      <File FileName="Pronia/Services/Interfaces/ISliderService.cs" />
+      <File FileName="Pronia/Areas/Manage/Controllers/CategoryController.cs" />
+      <File FileName="Pronia/Areas/Manage/Views/Category/Create.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Category/Index.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Product/Update.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Shared/_ValidationPartial.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Slider/Create.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Slider/Index.cshtml" />
+      <File FileName="Pronia/Areas/Manage/Views/Slider/Update.cshtml" />
+      <File FileName="Pronia/Controllers/FlowerController.cs" />
+      <File FileName="Pronia/Migrations/20230725142534_CreatedSlidersTable.cs" />
+      <File FileName="Pronia/Migrations/20230725142534_CreatedSlidersTable.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230725142902_CreatedSliderTable.cs" />
+      <File FileName="Pronia/Migrations/20230725142902_CreatedSliderTable.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230728100924_CreatedProductsTable.cs" />
+      <File FileName="Pronia/Migrations/20230728100924_CreatedProductsTable.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230729103602_AddedIsDeletedPropToProduct.cs" />
+      <File FileName="Pronia/Migrations/20230729103602_AddedIsDeletedPropToProduct.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230729103852_AddedIsDeletedPropToProducts.cs" />
+      <File FileName="Pronia/Migrations/20230729103852_AddedIsDeletedPropToProducts.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230729104133_AddedIsDeletedPropToProductsTable.cs" />
+      <File FileName="Pronia/Migrations/20230729104133_AddedIsDeletedPropToProductsTable.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230729104301_AddedIsDeletedPropToProductsTables.cs" />
+      <File FileName="Pronia/Migrations/20230729104301_AddedIsDeletedPropToProductsTables.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230729134454_CreatedProductImageTable.cs" />
+      <File FileName="Pronia/Migrations/20230729134454_CreatedProductImageTable.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230731180549_UpdateProductTable.cs" />
+      <File FileName="Pronia/Migrations/20230731191435_CreatedCategoriesTableRelatedProduct.cs" />
+      <File FileName="Pronia/Migrations/20230731180549_UpdateProductTable.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230731191435_CreatedCategoriesTableRelatedProduct.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230731195015_UpdateCategoryTableIsUniqueNameProp.cs" />
+      <File FileName="Pronia/Migrations/20230731195015_UpdateCategoryTableIsUniqueNameProp.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230802101938_SettingTableCreated.cs" />
+      <File FileName="Pronia/Migrations/20230802101938_SettingTableCreated.Designer.cs" />
+      <File FileName="Pronia/Migrations/20230805144612_AllTableUpdated.cs" />
+      <File FileName="Pronia/Migrations/20230805144612_AllTableUpdated.Designer.cs" />
+      <File FileName="Pronia/Models/Category.cs" />
+      <File FileName="Pronia/Models/ProductCategory.cs" />
+      <File FileName="Pronia/Models/Setting.cs" />
+      <File FileName="Pronia/Services/Implements/CategoryService.cs" />
+      <File FileName="Pronia/Services/LayoutService.cs" />
+      <File FileName="Pronia/Services/ServiceRegistration.cs" />
+      <File FileName="Pronia/ViewComponents/FooterViewComponent.cs" />
+      <File FileName="Pronia/ViewComponents/HeaderViewComponent.cs" />
+      <File FileName="Pronia/ViewModels/BasketVMs/BasketItemProductVM.cs" />
+      <File FileName="Pronia/ViewModels/BasketVMs/BasketItemVM.cs" />
+      <File FileName="Pronia/ViewModels/HomeVMs/HomeVM.cs" />
+      <File FileName="Pronia/ViewModels/ProductVMs/FilterVM.cs" />
+      <File FileName="Pronia/ViewModels/ProductVMs/GetShopVM.cs" />
+      <File FileName="Pronia/ViewModels/ProductVMs/UpdateProductGetVM.cs" />
+      <File FileName="Pronia/ViewModels/ProductVMs/UpdateProductVM.cs" />
+      <File FileName="Pronia/Views/Flower/Detail.cshtml" />
+      <File FileName="Pronia/Views/Flower/Index.cshtml" />
+      <File FileName="Pronia/wwwroot/Error.html" />
+      <File FileName="Pronia/appsettings.json" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Pronia" expanded="True">
-            <Node name="Pronia" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="DataAccess" expanded="True">
-                <Node name="ProniaDbContext.cs" selected="True" />
-              </Node>
-              <Node name="Migrations" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="Implements" expanded="True" />
-              </Node>
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="admin" expanded="True" />
+            <Node name="Pronia" selected="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Manage" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -61,7 +107,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Pronia PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>
